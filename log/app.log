@@ -1,0 +1,37 @@
+[2020-11-27 16:57:33] ALFI:PHPFaceAuthApi.INFO: Looking for faces in /home/lextomi/Projects/PHP/FaceRecognitionApi/app/../storage//temp/1111665676.png
+- Found superTfighter at (304, 184)
+  {"uid":"dfaeabd"}
+[2020-11-27 16:57:59] ALFI:PHPFaceAuthApi.INFO: Looking for faces in /home/lextomi/Projects/PHP/FaceRecognitionApi/app/../storage//temp/2097848835.png
+- Found superTfighter at (304, 184)
+  {"uid":"7fc74e5"}
+[2020-11-27 16:58:28] ALFI:PHPFaceAuthApi.INFO: superTfighter
+  {"uid":"d48f496"}
+[2020-11-27 16:59:12] ALFI:PHPFaceAuthApi.INFO:   {"uid":"b7a1d4c"}
+[2020-11-27 17:00:23] ALFI:PHPFaceAuthApi.INFO: superTfighter
+  {"uid":"702e9f3"}
+[2020-11-27 17:01:06] ALFI:PHPFaceAuthApi.INFO: superTfighter
+  {"uid":"da9b189"}
+[2020-11-27 17:02:14] ALFI:PHPFaceAuthApi.INFO: superTfighter
+  {"uid":"0f43b50"}
+[2020-11-27 17:05:21] ALFI:PHPFaceAuthApi.INFO: superTfighter
+  {"uid":"1272826"}
+[2020-11-27 17:05:56] ALFI:PHPFaceAuthApi.INFO: superTfighter
+  {"uid":"8e7184a"}
+[2020-11-27 17:06:45] ALFI:PHPFaceAuthApi.INFO: superTfighter
+  {"uid":"59814c4"}
+[2020-11-27 17:07:31] ALFI:PHPFaceAuthApi.INFO: superTfighter
+  {"uid":"8b845f0"}
+[2020-11-27 17:08:17] ALFI:PHPFaceAuthApi.INFO: superTfighter
+  {"uid":"1500209"}
+[2020-11-27 17:08:35] ALFI:PHPFaceAuthApi.INFO: superTfighter
+  {"uid":"1694b49"}
+[2020-11-27 17:11:10] ALFI:PHPFaceAuthApi.INFO: superTfighter
+  {"uid":"52b8f6a"}
+[2020-11-27 17:11:23] ALFI:PHPFaceAuthApi.INFO: superTfighter
+  {"uid":"984150f"}
+[2020-11-27 17:11:54] ALFI:PHPFaceAuthApi.INFO: superTfighter
+  {"uid":"e2eb7ee"}
+[2020-11-27 17:13:16] ALFI:PHPFaceAuthApi.INFO:   {"uid":"14a60ab"}
+[2020-11-27 17:13:22] ALFI:PHPFaceAuthApi.INFO:   {"uid":"2672a60"}
+[2020-11-27 17:14:53] ALFI:PHPFaceAuthApi.INFO: superTfighter
+  {"uid":"311101e"}

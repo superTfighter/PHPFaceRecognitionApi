@@ -19,7 +19,7 @@ class MonologError extends \Slim\Handlers\AbstractError
     {
 
         $context        = $this->formatException($exception);
-        $viewSettings   = $this->settings['settings']['System']['View'];
+
         $loggerSettings =
                $this->settings['settings']['System']['Logger']['error']
             ?? $this->settings['settings']['System']['logger']['error']
@@ -42,13 +42,6 @@ class MonologError extends \Slim\Handlers\AbstractError
 
         $responseBody = $_SERVER['SERVER_NAME'] .': '. $uidProcessor->getUid() .'-'. getmypid();
 
-        if (!$request->isXhr() && class_exists('\Slim\Views\Twig')) {
-
-            // Twig Extension   
-            $view = new \Slim\Views\Twig([ '__main__' => __DIR__ ], $viewSettings['twig']);
-            return $view->render($response, '/Resources/templates/500.twig', [ 'data' => $responseBody ]);
-
-        }
 
         return $response->withJson([
             'status'  => 'error',

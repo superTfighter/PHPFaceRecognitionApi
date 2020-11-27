@@ -10,3 +10,5 @@ $app->add(new \Slim\Middleware\Session([
 
 // CLI support
 // $app->add(new \pavlakis\cli\CliRequest());
+
+//TODO:ADD BASIC AUTH

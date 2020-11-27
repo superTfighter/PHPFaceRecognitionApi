@@ -1,0 +1,6 @@
+1. Install python dlib: https://gist.github.com/ageitgey/629d75c1baac34dfa5ca2a1928a7aeaf
+2. Install brew : /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+3. Install cmake: brew install cmake
+4. Install face detection python package: pip3 install face_recognition
+5. Install opencv python: pip3 install opencv-python
+6. Install scikit :pip3 install scikit-learn , pip3 install -U scikit-learn
