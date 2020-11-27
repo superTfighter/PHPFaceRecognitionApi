@@ -1,0 +1,21 @@
+{% extends 'app.twig' %}
+
+{% block body_content_header %}
+    HIBA: {{ error_header }} :(
+{% endblock %}
+
+{% block body_content %}
+
+<div class="content-body content-body-error">
+
+  <div class="box box-danger">
+      <div class="box-body text-red">
+
+        {{ error_content }}
+
+      </div>
+  </div>
+
+</div>
+
+{% endblock %}

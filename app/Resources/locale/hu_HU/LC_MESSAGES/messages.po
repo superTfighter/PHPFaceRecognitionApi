@@ -1,0 +1,32 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: sendMailCron\n"
+"POT-Creation-Date: 2017-03-16 15:03+0100\n"
+"PO-Revision-Date: 2017-03-16 15:04+0100\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: hu\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.8.12\n"
+"X-Poedit-Basepath: ..\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+"X-Poedit-KeywordsList: _translate\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-SearchPath-0: .\n"
+
+msgid "{{name}} must be an integer number"
+msgstr "A(z) {{name}} csak szám lehet"
+
+msgid "All of the required rules must pass for {{name}}"
+msgstr "A(z) {{name}} mező az összes szabálynak meg kell feleljen"
+
+msgid "{{name}} must be a valid date. Sample format: {{format}}"
+msgstr "A(z) {{name}} mezőnek valós dátumot kell tartalmaznia. Példa formátum: {{format}}"
+
+msgid "Key {{name}} must be valid"
+msgstr "A(z) {{name}} érvényesnek kell lennie"
+
+msgid "These rules must pass for {{name}}"
+msgstr "A(z) {{name}} mező meg kell feleljen ezeknek a szabályoknak"

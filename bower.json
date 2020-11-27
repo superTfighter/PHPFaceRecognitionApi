@@ -1,0 +1,20 @@
+{
+  "name": "slimbow",
+  "authors": [
+    "Alfi Team"
+  ],
+  "description": "Web components for Alfi Slim Skeleton",
+  "main": "",
+  "license": "MIT",
+  "homepage": "",
+  "dependencies": {
+    "jquery": "^3.2.1",
+    "jquery-ui": "^1.12.1",
+    "jquery.cookie": "jquery-cookie#^1.4.1",
+    "font-awesome": "font-awsome#^4.7.0",
+    "select2": "select2-dist#^4.0.4",
+    "toastr": "^2.1.3",
+    "admin-lte": "^2.4.0",
+    "bootstrap-confirmation2": "^2.4.0"
+  }
+}

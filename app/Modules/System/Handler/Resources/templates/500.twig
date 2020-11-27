@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>IIR3 ISE 500</title>
+        <style>
+        body {
+            background-color: #f4f6f9;
+            margin          : 0px;
+            font-family     : system-ui;
+            color           : #868586;
+        }
+        a {
+            text-decoration: none;
+            color          : #000;
+        }
+        .iseBox {
+            font-size  : 36px;
+            font-weight: 100;
+            text-align : center;
+            top        : 50%;
+            left       : 50%;
+            position   : absolute;
+            margin-left: -380px;
+            margin-top : -170px;
+        }
+        .ise500 {
+            font-weight  : 500;
+            font-size    : 200px;
+            line-height  : 120px;
+            margin-bottom: 60px;
+        }
+        #errorIdentifier {
+            background   : rgba(0, 0, 0, 0.025);
+            border       : 1px solid rgba(0, 0, 0, 0.15);
+            border-radius: 3px;
+            padding      : 3px 13px;
+            margin-top   : 10px;
+            display      : inline-block;
+            font-size    : 23px;
+            color        : #595959;
+            width        : 500px;
+            text-align   : center;
+        }
+        </style>
+        <script>
+            function copyErrorID() {
+
+                let copyText = document.getElementById("errorIdentifier");
+
+                copyText.select();
+
+                // For mobile devices
+                copyText.setSelectionRange(0, 99999);
+
+                document.execCommand("copy");
+
+                setTimeout(() => {
+                    copyText.blur();
+                }, 100);
+
+            }
+        </script>
+    </head>
+    <body>
+
+        <div
+            class="iseBox">
+
+            Internal Server Error
+
+            <div class="ise500">500</div>
+
+            <div style="font-size: 23px; line-height: 27px;">
+                Az oldalon ismeretlen hiba történt.<br>
+                Kérlek jelentsd a Rocket chat <a href="https://chat.kifu.hu/channel/alfi" target="_blank"><b>#ALFI</b></a> csatornáján az alábbi üzenet bemásolásával:<br>
+                <input id="errorIdentifier" value="{{ data }}">
+                <a href="javascript:false;" onclick="copyErrorID()">&#9986;</a>
+            </div>
+        </div>
+
+    </body>
+</html>
