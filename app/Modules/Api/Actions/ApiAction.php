@@ -24,7 +24,7 @@ class ApiAction
 
         $pythonScript = $pythonFolder . "train.py";
 
-        $command = escapeshellcmd("sudo python3 ". $pythonScript ." ". $dataFolder);
+        $command = escapeshellcmd("python3 ". $pythonScript ." ". $dataFolder);
 
         $output = shell_exec($command);
 
@@ -49,7 +49,7 @@ class ApiAction
 
         $pythonScript = $pythonFolder . "recognize.py";
 
-        $command = escapeshellcmd("sudo python3 ". $pythonScript ." ". $dataFolder . " " . $image) ;
+        $command = escapeshellcmd("python3 ". $pythonScript ." ". $dataFolder . " " . $image) ;
 
         $output = shell_exec($command);
 
@@ -72,8 +72,6 @@ class ApiAction
         }
 
         $image = $this->storeImage($base64image,$dataFolder);
-
-
 
         return $response->withJson(['status' => "success", "code" => 200, "message" => "Sikeres hozzáadás!"]);
     }

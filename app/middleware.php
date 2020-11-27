@@ -11,4 +11,8 @@ $app->add(new \Slim\Middleware\Session([
 // CLI support
 // $app->add(new \pavlakis\cli\CliRequest());
 
-//TODO:ADD BASIC AUTH
+$app->add(new Tuupola\Middleware\HttpBasicAuthentication([
+  "users" => [
+      "root" => "testpws",
+  ]
+]));
