@@ -20,36 +20,43 @@ class ApiAction
     public function train($request, $response, $args)
     {
         $pythonFolder = $this->settings['settings']['pythonPath'];
-        $dataFolder = $this->settings['settings']['userDataFolder'];
+
+        $dataFolder = $this->settings['settings']['userDataFolder'] . 'users/';
 
         $pythonScript = $pythonFolder . "train.py";
 
-        $command = escapeshellcmd("python3 ". $pythonScript ." ". $dataFolder);
+        $command = escapeshellcmd("python3 " . $pythonScript . " " . $dataFolder);
 
         $output = shell_exec($command);
 
-        return $response->withJson(['status' => 'success' , 'message' => $output]);
+        return $response->withJson(['status' => 'success', 'message' => $output]);
     }
 
     public function recognize($request, $response, $args)
     {
         $pythonFolder = $this->settings['settings']['pythonPath'];
-        $dataFolder = $this->settings['settings']['userDataFolder'];
 
-        $tempFolder = $this->settings['settings']['userDataFolder'] . '/temp';
+        $dataFolder = $this->settings['settings']['userDataFolder'] . 'users/';
 
-         // Create data folder if not exist
+        $tempFolder = $this->settings['settings']['userDataFolder'] . 'temp/';
+
+        // Create temp folder if not exist
         if (!is_dir($tempFolder)) {
             mkdir($tempFolder, 0777, true);
         }
 
+        // Create data folder if not exist
+        if (!is_dir($dataFolder)) {
+            mkdir($dataFolder, 0777, true);
+        }
+
         $base64image = $request->getParsedBody()['image'];
 
-        $image = $this->storeImage($base64image,$tempFolder);
+        $image = $this->storeImage($base64image, $tempFolder);
 
         $pythonScript = $pythonFolder . "recognize.py";
 
-        $command = escapeshellcmd("python3 ". $pythonScript ." ". $dataFolder . " " . $image) ;
+        $command = escapeshellcmd("python3 " . $pythonScript . " " . $dataFolder . " " . $image);
 
         $output = shell_exec($command);
 
@@ -61,28 +68,50 @@ class ApiAction
     public function store($request, $response, $args)
     {
         $userName = $args['username'];
-        
+
         $base64image = $request->getParsedBody()['image'];
 
-        $dataFolder = $this->settings['settings']['userDataFolder'] . '/' . $userName;
+        $dataFolder = $this->settings['settings']['userDataFolder'] . 'users/' . $userName;
 
         // Create data folder if not exist
         if (!is_dir($dataFolder)) {
             mkdir($dataFolder, 0777, true);
         }
 
-        $image = $this->storeImage($base64image,$dataFolder);
+        $image = $this->storeImage($base64image, $dataFolder);
 
         return $response->withJson(['status' => "success", "code" => 200, "message" => "Sikeres hozzáadás!"]);
     }
 
-    private function storeImage($base64image,$folder)
+    public function deleteTempFolder($request, $response, $args)
+    {
+        $dataFolder = $this->settings['settings']['userDataFolder'] . 'temp/';
+
+        if (is_dir($dataFolder)) {
+            exec('rm -r ' . $dataFolder . '*');
+        }
+
+        return $response->withStatus(200);
+    }
+
+    public function deleteAllData($request, $response, $args)
+    {
+        $dataFolder = $this->settings['settings']['userDataFolder'];
+
+        if (is_dir($dataFolder)) {
+            exec('rm -r ' . $dataFolder . '*');
+        }
+
+        return $response->withStatus(200);
+    }
+
+    private function storeImage($base64image, $folder)
     {
         $image = base64_decode($base64image);
-        
+
         $output_file = $folder . '/' . rand() . '.png';
 
-        file_put_contents($output_file,$image);
+        file_put_contents($output_file, $image);
 
         return $output_file;
     }
