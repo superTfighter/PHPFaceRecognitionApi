@@ -67,11 +67,11 @@ class ApiAction
 
     public function store($request, $response, $args)
     {
-        $userName = $args['username'];
+        $id = $args['id'];
 
         $base64image = $request->getParsedBody()['image'];
 
-        $dataFolder = $this->settings['settings']['userDataFolder'] . 'users/' . $userName;
+        $dataFolder = $this->settings['settings']['userDataFolder'] . 'users/' . $id;
 
         // Create data folder if not exist
         if (!is_dir($dataFolder)) {

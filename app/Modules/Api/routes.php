@@ -5,7 +5,7 @@ use Psr\Http\Message\ResponseInterface as Response;
 
 $app->get   ('/test',                                 '@Api\ApiAction:test' );
 
-$app->post('/store/{username}',                       '@Api\ApiAction:store');
+$app->post('/store/{id}',                       '@Api\ApiAction:store');
 
 $app->get('/train',                                   '@Api\ApiAction:train');
 $app->post('/recognize',                              '@Api\ApiAction:recognize');
