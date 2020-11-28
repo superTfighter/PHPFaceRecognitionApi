@@ -13,7 +13,7 @@ class ApiAction
 
     public function test($request, $response, $args)
     {
-              
+        echo "Working!";
     }
 
 

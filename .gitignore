@@ -1,6 +1,9 @@
-/app/settings.php
+app/settings.php
 /bower_components
-/vendor
+vendor/
 /node_modules
 package-lock.json
 log/*
+!log/.gitkeep
+storage/*
+!storage/.gitkeep
